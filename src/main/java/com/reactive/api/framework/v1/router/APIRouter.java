@@ -10,7 +10,7 @@ import reactor.core.publisher.Mono;
 
 import static com.reactive.api.framework.v1.constants.RequestEndPoints.PING;
 import static com.reactive.api.framework.v1.constants.RequestEndPoints.V1;
-import static com.reactive.api.framework.v1.handler.ResponseBuilder.buildResponse;
+import static com.reactive.api.framework.v1.builder.ResponseBuilder.buildResponse;
 
 @RestController
 @RequestMapping(V1)
@@ -22,7 +22,8 @@ public class APIRouter {
         return new PingAPIController().get("")
                 .flatMap(responseEntity -> {
                    return  buildResponse(responseEntity);
-                });
+                })
+                .log("Sending response");
     }
 
 }

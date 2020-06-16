@@ -25,7 +25,6 @@ import java.util.Map;
 @Order(-2)
 public class APIException extends AbstractErrorWebExceptionHandler {
 
-    @NonNull
     private int statusCode;
     @NonNull
     private String message;
@@ -62,7 +61,7 @@ public class APIException extends AbstractErrorWebExceptionHandler {
         response.setData(null);
         return ServerResponse.status(statusCode)
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(APIUtil.toJson(response), String.class)
+                .body(Mono.just(APIUtil.toJson(response)), String.class)
                 ;
     }
 }

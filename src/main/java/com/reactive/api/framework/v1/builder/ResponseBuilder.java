@@ -1,4 +1,4 @@
-package com.reactive.api.framework.v1.handler;
+package com.reactive.api.framework.v1.builder;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.reactive.api.framework.v1.pojo.APIResponse;
@@ -24,7 +24,8 @@ public class ResponseBuilder {
         try {
             return ServerResponse.status(HttpStatus.OK)
                     .contentType(MediaType.APPLICATION_JSON)
-                    .body(APIUtil.toJson(response), String.class);
+                    .body(Mono.just(APIUtil.toJson(response)), String.class)
+                    .log("Response ");
         } catch (JsonProcessingException e) {
             log.error("Error in building response ::: "+ e.getMessage());
         }

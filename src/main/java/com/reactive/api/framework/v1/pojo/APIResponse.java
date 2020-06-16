@@ -1,13 +1,14 @@
 package com.reactive.api.framework.v1.pojo;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
 import lombok.NonNull;
 
-import java.util.Map;
-
 @Data
-public class APIResponse {
+@JsonSerialize
+@JsonDeserialize
+public class APIResponse{
 
     @NonNull
     private Status status;
