@@ -1,10 +1,10 @@
-package com.reactive.api.reactiveapiframework;
+package com.reactive.api.framework;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ReactiveApiFrameworkApplicationTests {
+class ReactiveAPIFrameworkMainTests {
 
 	@Test
 	void contextLoads() {

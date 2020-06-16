@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.reactive.api.reactive-api-framework' is invalid and this project uses 'com.reactive.api.reactiveapiframework' instead.
+* The original package name 'com.reactive.api.reactive-api-framework' is invalid and this project uses 'com.reactive.api.framework' instead.
 
 # Getting Started
 

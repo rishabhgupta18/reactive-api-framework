@@ -1,13 +1,13 @@
-package com.reactive.api.reactiveapiframework;
+package com.reactive.api.framework;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ReactiveApiFrameworkApplication {
+public class ReactiveAPIFrameworkMain {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ReactiveApiFrameworkApplication.class, args);
+		SpringApplication.run(ReactiveAPIFrameworkMain.class, args);
 	}
 
 }
