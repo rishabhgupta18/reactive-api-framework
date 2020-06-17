@@ -20,7 +20,7 @@ public class APIResponseBuilder {
 
     public static Mono<ResponseEntity> buildResponse(EntityWrapper<? extends Object> entityWrapper) {
         APIResponse response = new APIResponse(Status.SUCCESS);
-        response.setMessage("success");
+        response.setMessage(entityWrapper.getMessage());
         response.setData(entityWrapper.getEntity());
         try {
             return Mono.just(ResponseEntity.status(HttpStatus.OK)

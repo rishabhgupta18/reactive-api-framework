@@ -22,20 +22,7 @@ public class APIRouter {
         return new PingAPIController().get("")
                 .flatMap(entityWrapper -> {
                    return  buildResponse(entityWrapper);
-                })
-                .log("Sending response");
+                });
     }
-
-//    @GetMapping(PING)
-//    public Mono<ResponseEntity> ping() throws Exception{
-//        APIResponse response = new APIResponse(Status.SUCCESS);
-//        response.setMessage("ping successfull");
-//        return Mono.just(ResponseEntity.status(HttpStatus.OK)
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .body(response)
-//        );
-//
-//
-//    }
 
 }
