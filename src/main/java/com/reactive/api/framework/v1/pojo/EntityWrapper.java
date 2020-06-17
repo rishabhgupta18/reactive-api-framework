@@ -9,12 +9,9 @@ import lombok.extern.slf4j.Slf4j;
 
 @Data
 @RequiredArgsConstructor
-public class ResponseEntity<T> {
+public class EntityWrapper<T> {
 
     @NonNull
     private T entity;
 
-    public String toJson() throws JsonProcessingException {
-        return APIUtil.toJson(entity);
-    }
 }
